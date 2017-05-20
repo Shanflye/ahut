@@ -4,11 +4,13 @@
 	var lis=document.querySelectorAll("#nav>ul>li");
 	for(var i=0;i<lis.length;i++){
 		lis[i].onmouseover=function(){
-			this.lastElementChild.style.height='140px';
+			var lst=this.children[this.children.length-1];
+			lst.style.height='140px';
 			this.className='hover';
 		}
 		lis[i].onmouseout=function(){
-			this.lastElementChild.style.height='0';
+			var lst=this.children[this.children.length-1]
+			lst.style.height='0';
 			this.className='';
 		}
 	}
@@ -65,11 +67,10 @@
 				lis[j].className='';
 			}
 			this.className='active';
-			var a=this.firstElementChild;
+			var a=this.firstElementChild||this.firstChild;
 			var href=a.getAttribute('href');
 			var div=document.getElementById(href);
 			var pages=document.querySelectorAll('#tag_page>div');
-			console.log(pages);
 			for(var i=0;i<pages.length;i++){
 				pages[i].style.display='none';
 			}
