@@ -25,6 +25,9 @@ a{
 .rt{
 	float:right;
 }
+img{
+	border:none;
+}
 /*页面顶部*/
 #top{
 	background-color:#30c;
@@ -97,12 +100,17 @@ a{
 }
 #nav>ul>li.hover{
 	background-color:rgba(0,0,0,0.5);
+	background-color:black\0;
+	filter:alpha(opacity=50);
 }
 #nav li>div{
 	position:absolute;
 	z-index:10;
 	left:0;
 	top:70px;
+	background-color:black\0;
+	width:180px\0;
+	filter:alpha(opacity=50);
 	background-color:rgba(0,0,0,0.5);
 	height:0;
 	overflow:hidden;
@@ -178,12 +186,13 @@ a{
 	padding:30px;
 	width:130px;
 }
-#main_left>div.lf table td:first-child{
+
+#main_left>div.lf table td{
 	border-top:1px dashed blue;
-	border-right:1px dashed blue;
+	border-left:1px dashed blue;
 }
-#main_left>div.lf table td:last-child{
-	border-top:1px dashed blue;
+#main_left>div.lf table td:first-child{
+	border-left:transparent;
 }
 #main_left>div.lf table tr:last-child>td{
 	border:none;
@@ -193,6 +202,7 @@ a{
 #nav_center{
 	height:50px;
 	background-image:linear-gradient(90deg,#00cb99,#005599);
+	filter:progid:DXImageTransform.Microsoft.gradient(gradientType =1,startColorstr='#00cb99', endColorstr='#005599');
 }
 #nav_center>h2{
 	margin-left:20px;
@@ -201,12 +211,12 @@ a{
 #nav_center>ul.rt>li{
 	float:left;
 	width:160px;
+	position:relative;
 }
 #nav_center>ul.rt>li>a{
 	height:50px;
 	line-height:50px;
 	font-size:20px;
-	position:relative;
 }
 #nav_center>ul.rt>li.active>a{
 	color:yellow;
@@ -315,18 +325,19 @@ a{
 	width:204px;
 	height:50px;
 }
-#main_right>p:last-child{
+#main_right>p.pbottom{
 	width:305px;
 	height:200px;
 	margin-top:405px;
 }
-#main_right>p:last-child img{
+#main_right>p.pbottom img{
 	width:100%;
 	vertical-align:bottom;
 }
 /*页面底部*/
 #footer{
 	background-image:linear-gradient(90deg,#0c9,#059);
+	filter:progid:DXImageTransform.Microsoft.gradient(gradientType =1,startColorstr='#00cb99', endColorstr='#005599');
 	height:100px;
 	padding-top:2px;
 }
